@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="is a web application designed to assist users find new recipes based on the ingredients 
+      they have and effortlessly helps them create the grocery lists for their cooking plans.">
+    <meta name="author" content="Ezekwe Chioma Francisca">
+    <title>SmartChef</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/feedback.css" />
+    
+</head>
+
+<body>
+    <header class="profile-container">
+        <div class="logo">
+          <img src="images/smartchef-logo.jpg" alt="smartchef logo" class="logo" loading="lazy">
+          <h2>SmartChef</h2>     
+        </div>
+        
+        <div>
+          <button id="menu-toggle" class="menu-btn">☰</button>
+          <nav class="navbar">
+            <button id="close-menu" class="close-btn">✖</button>
+            <a href="index.html" id="home-link">Home</a>
+            <a href="about.html" id="about-us-link">About</a>
+            <a href="feedback.html" id="feedback-link">Feedbacks</a>
+          </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="feedback-container">
+                <h1>We value your feedback</h1>
+
+                <form id="feedback-form">
+
+                <label for="name">Name (optional)</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="email">
+
+                <label for="message">Your Feedback *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+
+                </form>
+                <p id="thank-you-message">      
+                Thank you for your feedback!
+                </p>
+            </div>    
+            </div>  
+        </section> 
+    </main>
+
+    <footer>
+        <div>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/youtube.png" alt="Youtube">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/x.png" alt="Twitter">
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.jpg" alt="Facebook">
+        </a>
+      <p>©2025 👨‍🍳 SmartChef 🍴 WDD 330 Final Project 🛒 Ezekwe Chioma Francisca</p>
+    </div>
+    </footer>
+    <script src="scripts/feedback.js" type="module" defer></script>  
+</body>
+</html>

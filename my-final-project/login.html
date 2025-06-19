@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+      content="is a web application designed to assist users find new recipes based on the ingredients 
+      they have and effortlessly helps them create the grocery lists for their cooking plans.">
+    <meta name="author" content="Ezekwe Chioma Francisca">
+    <title>SmartChef</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/login.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+    
+    <header class="profile-container">
+    <div class="logo">
+        <img src="images/smartchef-logo.jpg" alt="smartchef logo" class="logo" loading="lazy">
+        <h2>SmartChef</h2>     
+    </div>
+    <button onclick="logout()">Logout</button>
+    </header>
+    <main>
+        <div class="hero">
+        <div class="container">
+        <h1>SmartChef</h1>
+        
+        <!-- Auth Section -->
+        <div id="auth-section">
+            <input type="email" id="email" placeholder="Email"/>
+            <input type="password" id="password" placeholder="Password"/>
+            <button onclick="login()">Login</button>
+            <button onclick="signup()">Register</button>
+            <p id="auth-message"></p>
+        </div>
+        
+        <div id="app-section">
+            <p>Welcome, <span id="user-email"></span>!</p>
+            <p>Proceed to ==> <a href="app.html"> SmartChef</a></p>
+        </div>
+        </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/youtube.png" alt="Youtube">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/x.png" alt="Twitter">
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook.jpg" alt="Facebook">
+            </a>
+        <p>©2025 👨‍🍳 SmartChef 🍴 WDD 330 Final Project 🛒 Ezekwe Chioma Francisca</p>
+        </div>
+    </footer>
+    <script src="scripts/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="is a web application designed to assist users find new recipes based on the ingredients 
+      they have and effortlessly helps them create the grocery lists for their cooking plans.">
+    <meta name="author" content="Ezekwe Chioma Francisca">
+    <title>SmartChef</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header class="profile-container">
+      <div class="logo">
+        <img src="images/smartchef-logo.jpg" alt="smartchef logo" class="logo" loading="lazy">
+        <h1>SmartChef</h1>     
+      </div>
+      <button onclick="logout()">Logout</button>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <section id="ingredient-input">
+          <h2>Enter Ingredients</h2>
+          <input type="text" id="ingredient-field" placeholder="Add an ingredient" />
+          <button id="add-ingredient-btn">Add</button>
+          <ul id="ingredient-list"></ul>
+        </section>
+        <section id="recipe-search">
+          <h2>Recipes</h2>
+          <button id="search-btn">Search Recipes</button>
+          <ul id="recipe-results"></ul>
+        </section>
+        <section id="nutrition-info" class="hidden">
+          <h3>Nutrition Information</h3>
+          <div id="nutrition-details"></div>
+        </section>
+        <section id="recipe-details" class="hidden">
+          <div id="recipe-details-modal" class="modal"></div>
+            <h2>Recipe Details</h2>
+            <button id="back-to-results">Back to Results</button>
+            <h3 id="recipe-title"></h3>
+            <ul id="recipe-ingredients"></ul>
+            <p id="recipe-instructions"></p>
+            <button id="add-to-grocery-list">Add Ingredients to Grocery List</button>
+            <p id="grocery-message" class="hidden"></p>
+        </section>
+        <section  id="grocery-list">
+          <h2>Grocery List</h2>
+          <ul id="grocery-items"></ul>
+          <button id="clear-grocery-list">Clear List</button>
+        </section>
+      </div>    
+    </div>
+  </main>
+
+  <footer>
+      <div>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/youtube.png" alt="Youtube">
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/x.png" alt="Twitter">
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook.jpg" alt="Facebook">
+          </a>
+        <p>©2025 👨‍🍳 SmartChef 🍴 WDD 330 Final Project 🛒 Ezekwe Chioma Francisca</p>
+      </div>
+  </footer>
+  <script src="scripts/app.js" type="module" defer></script>
+</body>
+</html>

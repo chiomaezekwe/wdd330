@@ -1,0 +1,251 @@
+:root{
+    --primary-color: #1b5e20;  /*Hunter green*/
+    --secondary-color: #FF9800; /*Orange peel*/ 
+    --secondary-color1: #e67e22; /*Orange*/
+    --accent-color: #CDDC39;  /*Pear green)*/
+    --accent-color1: #BC8F8F;  /*Rosy brown*/
+    --neutral-color: #FAFAFA;  /*Seasalt white*/
+    --neutral-color1: #000000; /*Black*/
+    --neutral-color2:#333333;  /*Jet grey*/
+}
+/* Reset and base styles */
+/* General Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--neutral-color);
+}
+
+/* Header Layout */
+header.profile-container {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;*/
+  align-items: stretch;
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  color: var(--neutral-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; 
+  right: 0;
+  background-color: var(--accent-color1);
+  width: 200px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--neutral-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+/* Style the menu toggle button */
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto; /* push to the right */
+}
+
+/* Close button inside the nav */
+.close-btn {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: calc(100vh - 140px); /* Adjustment done here for header and footer */
+  background: url('../images/food-cart.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 30px 30px 30px;
+  margin: 5px 0; 
+}
+
+.hero-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.hero-container h1 {
+  font-size: 2rem;
+  color: var(--secondary-color1);
+}
+
+.hero-container p {
+  margin: 8px 0;
+  color: var(--neutral-color2);
+}
+
+.hero-container .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hero-container .btn:hover {
+  background-color: var(--accent-color);
+}
+
+.hero-container a {
+  color: var(--accent-color1);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.hero-container a:hover {
+  color: var(--secondary-color1); 
+}
+
+.feedback-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0;
+    background: var(--neutral-color);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-left: -20px;
+    height: 80%;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.05em;
+    margin-top: 0.05em;
+    border-radius: 4px;
+    border: 1px solid var(--neutral-color1);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer img {
+  width: 30px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header.profile-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .hero-container {
+    text-align: left;
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .menu-btn, .close-btn {
+    display: none;
+  }
+}
+
+
+
+
+    

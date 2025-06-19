@@ -1,0 +1,160 @@
+:root{
+    --primary-color: #1b5e20;  /*Hunter green*/
+    --secondary-color: #FF9800; /*Orange peel*/ 
+    --secondary-color1: #e67e22; /*Orange*/
+    --accent-color: #CDDC39;  /*Pear green)*/
+    --accent-color1: #BC8F8F;  /*Rosy brown*/
+    --neutral-color: #FAFAFA;  /*Seasalt white*/
+    --neutral-color1: #000000; /*Black*/
+    --neutral-color2:#333333;  /*Jet grey*/
+}
+
+/* Reset and base styles */
+/* General Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--neutral-color);
+}
+
+
+/* Header Layout */
+header.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  color: var(--neutral-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Styling Hero */
+.hero {
+  position: relative;
+  height: calc(100vh - 140px); /*Adjustment is done here for header and footer*/
+  background: url('../images/hero-foodies.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 30px;
+  margin: 5px 0; 
+}
+
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: var(--neutral-color);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    color: var(--secondary-color1);
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid var(--neutral-color2);
+  border-radius: 5px;
+}
+
+button {
+  width: 48%;
+  padding: 12px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+#auth-message {
+  color: red;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer img {
+  width: 30px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Media Responsiveness Adjustments */
+@media (max-width: 768px) {
+  header.profile-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .hero-content {
+    text-align: left;
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .menu-btn, .close-btn {
+    display: none;
+  }
+}
